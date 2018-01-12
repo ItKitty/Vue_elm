@@ -11,15 +11,16 @@
           <span class="brand"></span>
           <span class="name">{{seller.name}}</span>
         </div>
+        <!-- 送达时间 -->
+        <div class="description">
+          {{seller.description}}/{{seller.deliveryTime}}分钟送达
+        </div>
+        <div v-if="seller.supports" class="support">
+          <span class="icon" :class="classMap[seller.supports[0].type]"></span>
+          <span class="text">{{seller.supports[0].description}}</span>
+        </div>
       </div>
-      <!-- 送达时间 -->
-      <div class="description">
-        {{seller.description}}/{{seller.deliveryTime}}分钟送达
-      </div>
-      <div v-if="seller.supports" class="support">
-        <span class="icon" :class="classMap[seller.supports[0].type]"></span>
-        <span class="text">{{seller.supports[0].description}}</span>
-      </div>
+
       <!-- 优惠 -->
       <div class="supports-count" v-if='seller.supports' @click="showDetail">
         <span class="count">{{seller.supports.length}}个</span>
@@ -104,6 +105,4 @@ export default {
 </script>
 <style scoped lang="stylus" rel="stylesheet/stylus">
 @import 'header.styl';
-
-
 </style>

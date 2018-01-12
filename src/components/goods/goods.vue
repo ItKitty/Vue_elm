@@ -50,7 +50,7 @@
   import shopCart from '../shopcart/shopCart.vue';
   import cartControl from '../cartControl/cartControl.vue';
   import food from '../food/food.vue';
-  import data from 'common/json/data.json';
+  import data from '../../common/json/data.json';
   //  const ERR_OK = 0;
   export default {
     props: {

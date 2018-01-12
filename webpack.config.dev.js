@@ -7,11 +7,10 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(css|stylus)$/,
+        test: /\.css$/,
         use: [
-          'vue-style-loader',
-          'css-loader',
-          'stylus-loader'
+          'style-loader',
+          'css-loader'
         ],
       },      {
         test: /\.vue$/,
@@ -40,7 +39,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
     },
-    extensions: ['*', '.js', '.vue', '.json']
+    extensions: ['*', '.js', '.vue', '.json','.styl']
   },
   devServer: {
     historyApiFallback: true,
